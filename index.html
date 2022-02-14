@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Leap year</title>
+    </head>
+    <body>
+        <input type="number" id="number1" placeholder="Number1">
+        <input type="number" id="number2" placeholder="Number2">
+        <br><br>
+        <button onclick="Leap_year()">Show leap years</button><br>
+        <label id="result"></label>
+
+    </body>
+
+    <script>
+        function Leap_year(){
+        var Number1=Number(document.getElementById("number1").value);
+        var Number2=Number(document.getElementById("number2").value);
+        console.log(Number1);
+        console.log(Number2);
+
+        for(var i=Number1;i<=Number2;i++){
+            if((i%4==0 && i%100 !=0) || i%400==0){
+               
+                    document.getElementById("result").innerHTML+=i+"<br>";
+                    console.log(i);
+                }
+                   
+            }
+        }
+        
+
+    </script>
+</html>
